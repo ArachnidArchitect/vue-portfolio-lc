@@ -1,4 +1,5 @@
 <template lang="">
+  <navbar-comp></navbar-comp>
   <section id="landing">
     <div class='greeting'>
       <h1>Taahir Du Toit</h1>
@@ -8,13 +9,30 @@
       <div class="gallery-row">
         <h1>MY FAVOURITE PROJECTS</h1>
       </div>
-      <div class="gallery-row gallery-cards" >
-        <project-card></project-card>
-        <project-card></project-card>
-        <project-card></project-card>
+      <div class="gallery-row gallery-cards " >
+        <div class="project-gallery" v-for="(project,index) in getProjects()" :key="index">
+          <project-card v-if="index<amountDisplayed">
+            <template #image>
+              <img :src="project.image" alt="">
+            </template>
+            <template #project-name>
+              <center><h1>{{project.name}}</h1></center>
+            </template>
+            
+            <template #github>
+              <a :href="project.github"><button><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/githubIcon.png" width="20px" height="20px" alt="githubIcon">Github</button></a>
+            </template>
+            <template #live>
+              <a :href="project.vercel"><button><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/liveIcon.png" width="20px" height="20px" alt="liveIcon">Live</button></a>
+            </template>
+          </project-card>
+
+        </div>
+        <!--  -->
+
       </div>
       <div class="gallery-row gr-3">
-        <button>EXPLORE MORE</button>
+        <button id="project-explore-btn" @click="amountDisplayed = 6">EXPLORE MORE</button>
       </div>
     </div>
   </section>
@@ -33,26 +51,54 @@
   <section id="resume">
     <resume-comp></resume-comp>
   </section>
+  <!-- this is the testimonials section -->
+  <section id="testimonials">
+    <testimonials-comp></testimonials-comp>
+  </section>
+  <!-- this is the contact section -->
+  <section id="contact">
+    <contact-comp></contact-comp>
+  </section>
 </template>
 <script>
-import ProjectsComp from "../components/ProjectsComp.vue";
+import NavbarComp from '../components/NavbarComp.vue';
 import ProjectCard from "../components/ProjectCard.vue";
 import AboutComp from "../components/AboutComp.vue";
 import ResumeComp from "../components/ResumeComp.vue";
+import TestimonialsComp from "../components/TestimonialsComp.vue";
+import ContactComp from "../components/ContactComp.vue";
 export default {
+  data(){
+    return{
+      amountDisplayed:3,
+    }
+  },
   components: {
-    ProjectsComp,
+    NavbarComp,
     ProjectCard,
     AboutComp,
     ResumeComp,
+    TestimonialsComp,
+    ContactComp,
   },
+  methods: {
+    getProjects() {
+      return this.$store.state.projects
+    }
+  },
+  computed:{
+    getData(){
+      return this.$store.dispatch('getData')
+    }
+  },
+   mounted() {
+     this.getData
+     this.getProjects()
+    },
 };
 </script>
 <style>
 /* section by section code */
-#about, #resume{
-  display:none
-}
 
 /* landing styling */
 .greeting{
@@ -88,7 +134,11 @@ export default {
 
 }
 .gallery-cards{
-  width: 80%;
+  flex-wrap: wrap;
+  width:100vw;
+}
+.gallery-cards img{
+width: 100%;
 }
 .gr-3 button{
   background-color: #005C86;
@@ -96,5 +146,41 @@ export default {
   color:#C7D5FF;
   font-size: 1.2em;
   padding: 1em 2em 1em 2em;
+}
+.project-gallery{
+  width:30%;
+  height:auto;
+  margin: 0 .5em 0 .5em;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
+}
+
+/* project github and live styling */
+.links>a{
+    width:40%;
+    height:100%;
+   
+}
+.links button{
+  opacity: 0;
+  background-color: #1F1E1E;
+  padding: 1em;
+  color:white;
+  transition-duration: .5s;
+  border-radius:1em;
+  width: 100%;
+  height:100%;
+  display:flex;
+  justify-content:center
+}
+.links button img{
+width: 20px;
+height: 20px;
+}
+.card:hover .links button{
+    opacity: 100;
+}
+button:hover{
+    background-color: #3f3d3d;
 }
 </style>

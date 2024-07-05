@@ -1,22 +1,22 @@
 <template>
   <body id="global-body">
-    <NavbarComp/>
     <router-view/>
   </body>
 </template>
 
 <script>
-import NavbarComp from './components/NavbarComp.vue'
+
 export default{
-  components:{
-    NavbarComp
-  }
 }
 
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+::selection {
+  color: rgb(221, 12, 214)
+}
+
 *{
   margin:0;
   padding:0;
