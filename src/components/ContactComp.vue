@@ -5,7 +5,7 @@
     <div class="contact-row contact-main">
       <div class="contact-col" >
 
-<!-- <spline scene='https://prod.spline.design/0pcxsQqqWt3Y997D/scene.splinecode' style="width:100%; height:100%"   @scroll.prevent/> -->
+ <spline scene='https://prod.spline.design/0pcxsQqqWt3Y997D/scene.splinecode' style="width:100%; height:100%"   @scroll.prevent/> 
 
 </div>
       <div class="contact-col">
@@ -21,7 +21,7 @@
   </div>
 </template>
 <script>
-// import spline from "spline-vue/v3"
+ import spline from "spline-vue/v3"
 export default {
   methods:{
     customVal(){
@@ -51,7 +51,7 @@ export default {
     }
   },
   components:{
-  //  spline
+    spline
   }}
 </script>
 <style>
