@@ -82,5 +82,6 @@ input{
   border:2px solid  #C7D5FF;
   margin:1em;
   padding: 1em;
+  color:white;
 }
 </style>
