@@ -87,7 +87,25 @@
 .tc-item img{
     width:80%
 }
+@media only screen and (max-width: 500px){
+    .testimonials{
+        height:120vh;
+    }
+    .to-item{
+        scale: .7;
+        padding: .5em;
+    }
+    .testimonials-cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minMax(100px, 1fr));
+    }
+    .tc-item{
+        width:100%;
+        height:100%;
+        text-align:center
+    }
 
+}
 </style>
 <script>
 /*es-lint disable */

@@ -9,7 +9,7 @@
       <div class="gallery-row">
         <h1>MY FAVOURITE PROJECTS</h1>
       </div>
-      <div class="gallery-row gallery-cards " >
+      <div class="gallery-cards " >
         <div class="project-gallery" v-for="(project,index) in getProjects()" :key="index">
           <project-card v-if="index<amountDisplayed">
             <template #image>
@@ -84,6 +84,11 @@ export default {
   methods: {
     getProjects() {
       return this.$store.state.projects
+    },
+    getScreenSize(){
+      if (window.matchMedia("(max-width: 500px)").matches) {
+        this.amountDisplayed = 4
+      }
     }
   },
   computed:{
@@ -94,6 +99,7 @@ export default {
    mounted() {
      this.getData
      this.getProjects()
+     this.getScreenSize()
     },
 };
 </script>
@@ -135,7 +141,10 @@ export default {
 }
 .gallery-cards{
   flex-wrap: wrap;
-  width:100vw;
+  width:95vw;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minMax(350px, 1fr));
+  gap: 1em;
 }
 .gallery-cards img{
 width: 100%;
@@ -148,11 +157,13 @@ width: 100%;
   padding: 1em 2em 1em 2em;
 }
 .project-gallery{
-  width:30%;
+  width:100%;
   height:auto;
   margin: 0 .5em 0 .5em;
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
+  
+}
+.card{
+  width: fit-content;
 }
 
 /* project github and live styling */
@@ -182,5 +193,11 @@ height: 20px;
 }
 button:hover{
     background-color: #3f3d3d;
+}
+
+@media only screen and (max-width: 500px){
+  .gallery-cards{
+    grid-template-columns: repeat(auto-fit, minMax(170px, 1fr));
+  }
 }
 </style>

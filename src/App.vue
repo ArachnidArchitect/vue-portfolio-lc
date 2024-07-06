@@ -1,12 +1,16 @@
 <template>
   <body id="global-body">
     <router-view/>
+    <footer-comp/>
   </body>
 </template>
 
 <script>
-
+import FooterComp from './components/FooterComp.vue'
 export default{
+  components:{
+    FooterComp,
+  }
 }
 
 </script>
@@ -35,7 +39,7 @@ export default{
   color: #80A1FF;
 }
 
-nav {
+#nav1 {
   padding: 30px;
   display: flex;
   justify-content: center;
@@ -48,22 +52,22 @@ nav {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.541) 75%, rgba(0, 0, 0, 0))
 }
 
-nav ul {
+#nav1 ul {
   font-weight: bold;
   color: #2c3e50;
   display: flex;
 }
-nav ul li {
+#nav1 ul li {
   font-weight: bold;
   color: #2c3e50;
   list-style: none;
   text-transform:lowercase;
   padding: 0 1em 0 1em;
 }
-nav ul li > *{
+#nav1 ul li > *{
   text-decoration: none;
 }
-nav a.router-link-exact-active {
+#nav1 a.router-link-exact-active {
   color: #42b983;
 }
 </style>

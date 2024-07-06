@@ -22,9 +22,9 @@
 <style scoped>
 .card{
     background-color:black;
-    margin:1em;
     padding:1em;
-    width: 100%;
+    width: 95%;
+    height: 100%;
     border-radius:25px;
     border: 5px solid #80A1FF;
 }

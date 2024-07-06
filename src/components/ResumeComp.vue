@@ -12,7 +12,7 @@
         </div>
         <div class="resume-row">
             <div class="resume-col">
-                <div class="resume-card" data-aos="zoom-in-right">
+                <div class="resume-card" >
                     <div class="resume-item" ><h1>[2022] - Graduated from Islamia College</h1></div>
                     <div class="resume-item-line"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/resumeAsset1.png" alt=""></div>
                 </div>
@@ -52,6 +52,9 @@
         display:flex;
         flex-direction: column;
         align-items: center;
+        scale: 1 1;
+        animation-name: left-to-right linear;
+        animation-timeline: scroll();
     }
     .resume-item{
         background-color: #80A1FF;
@@ -78,6 +81,7 @@
         display: flex;
         flex-direction: column;
         align-items: end;
+        
 
     }
     .resume-nav a{
@@ -91,4 +95,15 @@
         border-bottom-left-radius: 2em;
         border-top-left-radius: 2em;
     }
+
+ [data-aos] { 
+            pointer-events: none; 
+    }
+    .aos-animate { pointer-events: auto; } 
+    @media only screen and (max-width: 500px){
+        .resume{
+            height:170vh
+        }
+    }      
+
 </style>

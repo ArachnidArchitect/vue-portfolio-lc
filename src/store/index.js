@@ -51,7 +51,10 @@ export default createStore({
         commit('setTestimonials', testimonials)
         return data
       } catch (error) {
-        console.log(error);
+        alert(error+':(')
+        if(error == "TypeError: Failed to fetch"){
+          alert('This is usually a network isusu. Try Again when you are reconnected')
+        };
       }
       
     }

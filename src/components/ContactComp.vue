@@ -3,7 +3,7 @@
     <div class="contact-row"><h1>CONTACT</h1></div>
 
     <div class="contact-row contact-main">
-      <div class="contact-col" >
+      <div class="contact-col splineModel" >
 
  <spline scene='https://prod.spline.design/0pcxsQqqWt3Y997D/scene.splinecode' style="width:100%; height:100%"   @scroll.prevent/> 
 
@@ -76,6 +76,7 @@ canvas{
 form{
   display: flex;
   flex-direction: column;
+  align-items:center
 }
 input{
   background-color: transparent;
@@ -83,5 +84,23 @@ input{
   margin:1em;
   padding: 1em;
   color:white;
+  width: 97%;
+}
+form button{
+  width:80%;
+  border-radius:1em;
+  background-color: #C7D5FF;
+  
+}
+
+@media only screen and (max-width:500px){
+.splineModel{
+  display:none;
+}
+}
+@media only screen and (max-width: 500px){
+  .contact{
+    height: 70vh;
+  }
 }
 </style>

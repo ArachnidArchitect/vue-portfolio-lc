@@ -161,4 +161,14 @@ export default {
 .ac4 p{
   padding-top:1.6em;
 }
+
+@media only screen and (max-width: 500px) {
+  .ac3{
+    display:none
+  }
+  .ac4{
+    width:80%;
+    overflow-y: scroll;
+  }
+}
 </style>
