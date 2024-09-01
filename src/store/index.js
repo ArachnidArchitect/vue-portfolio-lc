@@ -54,7 +54,7 @@ export default createStore({
         alert(error+':(')
         if(error == "TypeError: Failed to fetch"){
           alert('This is usually a network isusu. Try Again when you are reconnected')
-        };
+        }
       }
       
     }

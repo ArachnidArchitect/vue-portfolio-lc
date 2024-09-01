@@ -1,6 +1,6 @@
 <template lang="">
     <div class="fullEd">
-        <router-link to="/"><button>Go Back</button></router-link>
+        <router-link to="/" class="return_btn"><button>Go Back</button></router-link>
   <div class="edu-col">
     <div class="edu-row">
       <h1>Full Work Experience</h1>
@@ -17,7 +17,7 @@
             {{education.description}}
           </p>
 
-          <a href="#" >Certificate</a>
+          <a :href="education.link" target="_blank">Certificate</a>
         </div>
         <div class="edu-ref" >
           <div class="edu-ref-item" v-for="contact in education.contact" :key="contact">{{contact.name}}</div>

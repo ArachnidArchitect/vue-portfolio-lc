@@ -1,9 +1,9 @@
 <template lang="">
     <!-- this is an absolute navbar to link to the separate views -->
     <div class="resume-nav">
-        <router-link to="/fullEd"><button>Full Education</button></router-link>
-        <router-link to="/fullWork"><button>Full Work Experience</button></router-link>
-        <router-link to="/fullSkills"><button>All Skills</button></router-link>
+        <router-link to="/fullEd" class="resume-views"><button><i class="fa-solid fa-briefcase" style="color: #ffffff;"></i> <span class="desktop-alt">Full Education</span></button></router-link>
+        <router-link to="/fullWork" class="resume-views"><button><i class="fa-solid fa-graduation-cap" style="color: #ffffff;"></i> <span class="desktop-alt">Full Work Experience</span></button></router-link>
+        <router-link to="/fullSkills" class="resume-views"><button><i class="fa-solid fa-layer-group" style="color: #ffffff;"></i> <span class="desktop-alt">All Skills</span></button></router-link>
     </div>
     <!-- this is the resume section content -->
     <div class="resume">
@@ -35,11 +35,14 @@
 <style>
     .resume{
         height: 110vh;
+        margin-bottom:5em;
+
     }
     .resume-row{
         display: flex;
         justify-content: center;
         padding-top:2em;
+        width:100%;
     }
     .resume-col{
         display: flex;
@@ -78,19 +81,22 @@
         position: sticky;
         right:0;
         top:30%;
+        width:fit-content;
         display: flex;
         flex-direction: column;
-        align-items: end;
+        float:right;
         
 
     }
     .resume-nav a{
-        width: 10em;
+        width: 100%
     }
     .resume-nav button{
         padding: 1em;
         margin-top:10px;
-        background-color:blue;
+        background-color:#005C86;
+        color:white;
+        font-weight:600;
         width: 100%;
         border-bottom-left-radius: 2em;
         border-top-left-radius: 2em;
@@ -100,7 +106,14 @@
             pointer-events: none; 
     }
     .aos-animate { pointer-events: auto; } 
+    @media only screen and (max-width: 800px){
+        .desktop-alt{display:none}
+    } 
+    .resume-nav button{
+        border:none
+    }   
     @media only screen and (max-width: 500px){
+        h1{font-size:1.2em}
         .resume{
             height:170vh
         }

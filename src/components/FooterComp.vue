@@ -3,8 +3,8 @@
         <div class="footer-row footer-main">
               <div class="footer-row"><a href="#">Taahir Du Toit © {{currentYear()}}</a></div>
               <div class="footer-row footer-images">
-              <a href="https://www.github.com/arachnidarchitect/"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/github.png.png" alt="git"></a>
-              <a href="https://www.linkedin.com/in/taahir-dutoit-501652210/"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/linkedin.png.png" alt="linkeddin"></a>
+              <a href="https://www.github.com/arachnidarchitect/" target="_blank"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/github.png.png" alt="git"></a>
+              <a href="https://www.linkedin.com/in/taahir-dutoit-501652210/" target="_blank"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/linkedin.png.png" alt="linkeddin"></a>
           </div>
               <div class="footer-row"><a href="mailto:proffesionalworkingstuff@gmail.com">Let's work together!</a></div>
       </div>
@@ -12,8 +12,8 @@
     <div id="footer2" class="footer">
         <div class="footer-row">
           <div class="footer-col footer-images">
-              <a href="https://www.github.com/arachnidarchitect/"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/github.png.png" alt="git"></a>
-              <a href="https://www.linkedin.com/in/taahir-dutoit-501652210/"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/linkedin.png.png" alt="linkedin"></a>
+              <a href="https://www.github.com/arachnidarchitect/" target="_blank"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/github.png.png" alt="git"></a>
+              <a href="https://www.linkedin.com/in/taahir-dutoit-501652210/" target="_blank"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/linkedin.png.png" alt="linkedin"></a>
           </div>
           <div class="footer-col">
               <div class="footer-row"><a href="#">Taahir Du Toit © {{currentYear()}}</a></div>

@@ -20,10 +20,10 @@
             </template>
             
             <template #github>
-              <a :href="project.github"><button><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/githubIcon.png" width="20px" height="20px" alt="githubIcon">Github</button></a>
+              <a :href="project.github" target="_blank"><button><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/githubIcon.png" width="20px" height="20px" alt="githubIcon">Github</button></a>
             </template>
             <template #live>
-              <a :href="project.vercel"><button><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/liveIcon.png" width="20px" height="20px" alt="liveIcon">Live</button></a>
+              <a :href="project.vercel" target="_blank"><button><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/liveIcon.png" width="20px" height="20px" alt="liveIcon">Live</button></a>
             </template>
           </project-card>
 

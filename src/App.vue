@@ -70,4 +70,13 @@ export default{
 #nav1 a.router-link-exact-active {
   color: #42b983;
 }
+.return_btn>button{
+  background-color:#005C86;
+  padding:1em;
+  color:white;
+  font-weight:600;
+  border:none;
+  border-top-right-radius:1em;
+  border-bottom-right-radius:1em;
+}
 </style>
