@@ -17,7 +17,7 @@
             {{education.description}}
           </p>
 
-          <a href="#" >Certificate</a>
+          <a href="https://drive.google.com/file/d/1M8kGzd97bhVRv2T7ujJFt8HewKacvtN6/view?usp=sharing" >Certificate</a>
         </div>
         <div class="edu-ref" >
           <div class="edu-ref-item" v-for="contact in education.contact" :key="contact">{{contact.name}}</div>
