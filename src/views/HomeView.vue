@@ -52,9 +52,9 @@
     <resume-comp></resume-comp>
   </section>
   <!-- this is the testimonials section -->
-  <section id="testimonials">
+  <!-- <section id="testimonials">
     <testimonials-comp></testimonials-comp>
-  </section>
+  </section> -->
   <!-- this is the contact section -->
   <section id="contact">
     <contact-comp></contact-comp>
@@ -65,7 +65,7 @@ import NavbarComp from '../components/NavbarComp.vue';
 import ProjectCard from "../components/ProjectCard.vue";
 import AboutComp from "../components/AboutComp.vue";
 import ResumeComp from "../components/ResumeComp.vue";
-import TestimonialsComp from "../components/TestimonialsComp.vue";
+// import TestimonialsComp from "../components/TestimonialsComp.vue";
 import ContactComp from "../components/ContactComp.vue";
 export default {
   data(){
@@ -78,7 +78,7 @@ export default {
     ProjectCard,
     AboutComp,
     ResumeComp,
-    TestimonialsComp,
+    // TestimonialsComp,
     ContactComp,
   },
   methods: {
@@ -86,9 +86,12 @@ export default {
       return this.$store.state.projects
     },
     getScreenSize(){
-      if (window.matchMedia("(max-width: 500px)").matches) {
+      if(window.matchMedia("(max-width: 1920px)").matches){
         this.amountDisplayed = 4
+      } else if(window.matchMedia("(max-width:2860px)").matches){
+        this.amountDisplayed = 6
       }
+
     }
   },
   computed:{
@@ -97,9 +100,9 @@ export default {
     }
   },
    mounted() {
+     this.getScreenSize()
      this.getData
      this.getProjects()
-     this.getScreenSize()
     },
 };
 </script>
@@ -111,7 +114,7 @@ export default {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  height: 80vh;
+  height: 90vh;
   background-image: url('https://images.unsplash.com/photo-1714779573220-39c843a7daa3?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position-x:center;
@@ -126,7 +129,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items:center;
-  justify-content:center;
+  justify-content:space-around;
 
   height: 150vh;
   background: rgb(13,31,148);
@@ -139,10 +142,16 @@ export default {
   padding-bottom: 2em;
 
 }
+.gallery-row h1{
+  font-size: 2em;
+  text-align:center;
+}
 .gallery-cards{
   flex-wrap: wrap;
   width:95vw;
   display:grid;
+  overflow-y:scroll;
+  overflow-x:none;
   grid-template-columns: repeat(auto-fit, minMax(350px, 1fr));
   gap: 1em;
 }
@@ -197,7 +206,8 @@ button:hover{
 
 @media only screen and (max-width: 500px){
   .gallery-cards{
-    grid-template-columns: repeat(auto-fit, minMax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
+    height: 80vh;
   }
 }
 </style>

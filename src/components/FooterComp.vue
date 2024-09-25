@@ -5,8 +5,13 @@
               <div class="footer-row footer-images">
               <a href="https://www.github.com/arachnidarchitect/" target="_blank"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/github.png.png" alt="git"></a>
               <a href="https://www.linkedin.com/in/taahir-dutoit-501652210/" target="_blank"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/linkedin.png.png" alt="linkeddin"></a>
-          </div>
-              <div class="footer-row"><a href="mailto:proffesionalworkingstuff@gmail.com">Let's work together!</a></div>
+            </div>
+              <div class="footer-row">
+                <div class="footer-col">
+                    <span class="contact_no"><img src="../assets/png_flbie.svg" alt="" width="30px" height="30px">+27 67 135 8236</span>
+                <a href="mailto:proffesionalworkingstuff@gmail.com">Let's work together!</a>
+                </div>
+            </div>
       </div>
     </div>
     <div id="footer2" class="footer">
@@ -17,6 +22,7 @@
           </div>
           <div class="footer-col">
               <div class="footer-row"><a href="#">Taahir Du Toit © {{currentYear()}}</a></div>
+              <div class="footer-row"><span class="contact_no">+27 67 135 8236</span></div>
               <div class="footer-row"><a href="mailto:proffesionalworkingstuff@gmail.com">Let's work together!</a></div>
           </div>
       </div>
@@ -61,7 +67,6 @@ export default {
 }
 .footer-images a{
     width:100%;
-    padding:1px 5px 1px 5px;
 }
 .footer-images a img{
     width:100%
@@ -70,6 +75,13 @@ export default {
 a, a:visited{
     text-decoration: none;
     color:#929397;
+}
+.contact_no{
+    text-wrap: nowrap;
+}
+a{
+    display:flex;
+    align-items:center;
 }
 @media only screen and (max-width:500px) {
     #footer1{

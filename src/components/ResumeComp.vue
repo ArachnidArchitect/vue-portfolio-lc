@@ -34,7 +34,7 @@
 </template>
 <style>
     .resume{
-        height: 110vh;
+        height: 130vh;
         margin-bottom:5em;
 
     }
