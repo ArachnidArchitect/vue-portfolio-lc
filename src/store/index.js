@@ -6,6 +6,7 @@ export default createStore({
     projects:null,
     education:null,
     skills:null,
+    softSkills:null,
     experience:null,
     testimonials:null,
 
@@ -28,6 +29,9 @@ export default createStore({
     setSkills(state, payload){
       state.skills = payload
     },
+    setSoftSkills(state, payload){
+      state.softSkills = payload
+    },
     setExperience(state, payload){
       state.experience = payload
     },
@@ -41,12 +45,13 @@ export default createStore({
       try {
         let response = await fetch('https://arachnidarchitect.github.io/first_api/data/data.json')
         let data = await response.json()
-        let {AboutMe,  Projects, education, skills, workExp, testimonials} = data
+        let {AboutMe,  Projects, education, skills,softSkills, workExp, testimonials} = data
         console.log(AboutMe)
         commit('setAboutMe', AboutMe),
         commit('setProjects', Projects),
         commit('setEducation', education),
         commit('setSkills', skills),
+        commit('setSoftSkills', softSkills),
         commit('setExperience', workExp),
         commit('setTestimonials', testimonials)
         return data

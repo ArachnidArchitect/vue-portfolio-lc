@@ -152,7 +152,7 @@ export default {
   display:grid;
   overflow-y:scroll;
   overflow-x:none;
-  grid-template-columns: repeat(auto-fit, minMax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
   gap: 1em;
 }
 .gallery-cards img{

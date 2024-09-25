@@ -22,9 +22,10 @@
         <div class="skills-row">
             <div class="skills-grid">
                 
-                <div class="skills-grid-item" v-for="skill in getSkills()" :key="skill">
+                <div class="skills-grid-item" v-for="skill in getSoftSkills()" :key="skill">
                     <div class="gi-card skills-col">
-                        <div class="gi-card-image">{{skill.image}}</div>
+                        <div class="gi-card-image">  <img :src="skill.image"> </div>
+
                         <div class="gi-card-name">{{skill.name}}</div>
                     </div>
                 </div>
@@ -45,6 +46,9 @@ export default {
     methods:{
         getSkills(){
             return this.$store.state.skills
+        },
+        getSoftSkills(){
+            return this.$store.state.softSkills
         }
     },
     computed:{
