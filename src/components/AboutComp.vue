@@ -91,6 +91,7 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 .about{
+  margin-top:2em;
   height: 100vh;
   background: linear-gradient(180deg, rgba(13,31,148,0.1), black);
 }
@@ -120,11 +121,13 @@ export default {
  justify-content: space-evenly;
 }
 .ac2 button{
-  background-color: #005C86;
-  border: 5px solid #0DDFC3;
-  color:#C7D5FF;
-  font-size: 1em;
-  padding: .5em 1em .5em 1em;
+  background-color:#005C86;
+  border-radius:1em;
+  color:white;
+  border:none;
+  font-size: .7em;
+  font-weight:600;
+  padding: 1em 2em 1em 2em;
 }
 .ac3{
   justify-content: center;
@@ -167,20 +170,24 @@ export default {
   padding-top:1.6em;
 }
 .resume-views{
-  width:fit-content;
-  float:right;
+  width:100%;
+  display:flex;
+  justify-content: center;
 }
 .resume-views button{
   padding: 1em;
         margin-top:10px;
         background-color:#005C86;
+        border:none;
         color:white;
         font-weight:600;
         width: fit-content;
         border-radius: 2em;
         float:right;
 }
-
+button:hover{
+    background-color: #0284c0;
+}
 @media only screen and (max-width: 500px) {
   .ac3{
     display:none

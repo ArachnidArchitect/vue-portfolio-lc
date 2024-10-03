@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="resume-row">
-            <a href="https://drive.google.com/file/d/1P0_pcewWGGEjKGiVUgxkgpURw-lS1T1T/view?usp=sharing" target="_blank"><button><h1>RESUME</h1></button></a>
+            <a href="https://drive.google.com/file/d/1P0_pcewWGGEjKGiVUgxkgpURw-lS1T1T/view?usp=sharing" target="_blank"><button>RESUME</button></a>
         </div>
     </div>
 
@@ -70,9 +70,11 @@
         box-shadow: 1px 1px 15px #ff09de7d;
     }
     .resume-row button{
-        background-color: #005C86;
-  border: 5px solid #0DDFC3;
-  color:#C7D5FF;
+        background-color:#005C86;
+  border-radius:1em;
+  color:white;
+  font-weight:600;
+  border:none;
   font-size: 1.2em;
   padding: 1em 2em 1em 2em;
     }
@@ -100,6 +102,9 @@
         border-bottom-left-radius: 2em;
         border-top-left-radius: 2em;
     }
+    button:hover{
+    background-color: #0284c0;
+}
 
  [data-aos] { 
             pointer-events: none; 

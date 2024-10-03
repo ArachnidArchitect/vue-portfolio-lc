@@ -89,7 +89,10 @@ input{
 form button{
   width:80%;
   border-radius:1em;
-  background-color: #C7D5FF;
+  padding:1em;
+  border:2px solid #C7D5FF;
+  background-color: transparent;
+  color:#C7D5FF;
   
 }
 

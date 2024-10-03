@@ -5,7 +5,28 @@
       <h1>Taahir Du Toit</h1>
       <p>Full-stack Web Developer</p>
     </div>
-    <div class="gallery" id="projects">
+  </section>
+
+  <!-- this is the projects section -->
+  <!-- <section id="projects">
+    <projects-comp></projects-comp>
+  </section> -->
+
+  <!-- this is the about section -->
+  <section id="about">
+    <about-comp></about-comp>
+  </section>
+
+  <!-- this is the resume section -->
+  <section id="resume">
+    <resume-comp></resume-comp>
+  </section>
+  <!-- this is the testimonials section -->
+  <!-- <section id="testimonials">
+    <testimonials-comp></testimonials-comp>
+  </section> -->
+  <!-- this is the contact section -->
+  <div class="gallery" id="projects">
       <div class="gallery-row">
         <h1>MY FAVOURITE PROJECTS</h1>
       </div>
@@ -35,27 +56,6 @@
         <button id="project-explore-btn" @click="amountDisplayed = 6">EXPLORE MORE</button>
       </div>
     </div>
-  </section>
-
-  <!-- this is the projects section -->
-  <!-- <section id="projects">
-    <projects-comp></projects-comp>
-  </section> -->
-
-  <!-- this is the about section -->
-  <section id="about">
-    <about-comp></about-comp>
-  </section>
-
-  <!-- this is the resume section -->
-  <section id="resume">
-    <resume-comp></resume-comp>
-  </section>
-  <!-- this is the testimonials section -->
-  <!-- <section id="testimonials">
-    <testimonials-comp></testimonials-comp>
-  </section> -->
-  <!-- this is the contact section -->
   <section id="contact">
     <contact-comp></contact-comp>
   </section>
@@ -159,9 +159,11 @@ export default {
 width: 100%;
 }
 .gr-3 button{
-  background-color: #005C86;
-  border: 5px solid #0DDFC3;
-  color:#C7D5FF;
+  background-color:#005C86;
+  border-radius:1em;
+  border:none;
+  font-weight:600;
+  color:white;
   font-size: 1.2em;
   padding: 1em 2em 1em 2em;
 }
@@ -201,7 +203,7 @@ height: 20px;
     opacity: 100;
 }
 button:hover{
-    background-color: #414141;
+    background-color: #0284c0;
 }
 
 @media only screen and (max-width: 500px){
