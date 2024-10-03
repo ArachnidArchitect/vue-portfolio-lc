@@ -8,7 +8,7 @@
     <!-- this is the resume section content -->
     <div class="resume">
         <div class="resume-row">
-            <h1>RESUME</h1>
+            <h1>EDUCATION AND WORK EXPERIENCE</h1>
         </div>
         <div class="resume-row">
             <div class="resume-col">

@@ -201,7 +201,7 @@ height: 20px;
     opacity: 100;
 }
 button:hover{
-    background-color: #3f3d3d;
+    background-color: #414141;
 }
 
 @media only screen and (max-width: 500px){

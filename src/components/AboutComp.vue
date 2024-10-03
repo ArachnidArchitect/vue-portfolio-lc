@@ -28,10 +28,12 @@
         <h2><button @click="aboutAnimation">More about me</button></h2>
       </div>
       <div class="about-column ac3 show">
-        <h1>HOBBIES & INTERESTS</h1>
-        <h3><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/surfingIcon.png" alt="">Surfing</h3>
-        <h3><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/poolIcon.png" alt="">Pool</h3>
-        <h3><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/analyticsIcon.png" alt="">New experiences</h3>
+        <h1>SOME SOFT SKILLS</h1>
+        <div  v-for="(skill, index) in getSoftSkills()" :key="index">
+          <h3 v-if="index<3"><img :src="skill.image" alt="">{{ skill.name }}</h3>
+        </div>
+    <router-link to="/fullSkills" class="resume-views"><button><i class="fa-solid fa-layer-group" style="color: #ffffff;"></i> <span class="desktop-alt">All Skills</span></button></router-link>
+
       </div>
       <div class="about-column ac4">
   <p v-for="(par, index) in getAboutInfo()" :key="index">{{ par }}</p>
@@ -58,6 +60,9 @@ export default {
     getAboutInfo(){
       return this.$store.state.aboutMe
     },
+    getSoftSkills(){
+            return this.$store.state.softSkills
+        },
     aboutAnimation(){
       let col1 = document.querySelector('.ac1')
       let col2 = document.querySelector('.ac2')
@@ -83,7 +88,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 .about{
   height: 100vh;
@@ -160,6 +165,20 @@ export default {
 }
 .ac4 p{
   padding-top:1.6em;
+}
+.resume-views{
+  width:fit-content;
+  float:right;
+}
+.resume-views button{
+  padding: 1em;
+        margin-top:10px;
+        background-color:#005C86;
+        color:white;
+        font-weight:600;
+        width: fit-content;
+        border-radius: 2em;
+        float:right;
 }
 
 @media only screen and (max-width: 500px) {
