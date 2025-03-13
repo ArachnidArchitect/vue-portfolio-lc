@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="resume-row">
-            <a href="https://drive.google.com/file/d/1P0_pcewWGGEjKGiVUgxkgpURw-lS1T1T/view?usp=sharing" target="_blank"><button><h1>RESUME</h1></button></a>
+            <a href="https://docs.google.com/document/d/1bzuCWbfb9Ve-ia8zt2_lH9bZA700nFxd/edit?usp=sharing&ouid=108457928864238783131&rtpof=true&sd=true" target="_blank"><button><h1>RESUME</h1></button></a>
         </div>
     </div>
 
