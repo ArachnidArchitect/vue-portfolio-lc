@@ -13,7 +13,7 @@
         <div class="project-gallery" v-for="(project,index) in getProjects()" :key="index">
           <project-card v-if="index<amountDisplayed">
             <template #image>
-              <img :src="project.image" alt="">
+              <img :src="project.image" alt="" class="project-images">
             </template>
             <template #project-name>
               <center><h1>{{project.name}}</h1></center>
@@ -141,13 +141,21 @@ export default {
 }
 .gallery-cards{
   flex-wrap: wrap;
-  width:95vw;
+  width:98dvw;
   display:grid;
-  grid-template-columns: repeat(auto-fit, minMax(350px, 1fr));
-  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minMax(400px, 1fr));
+  max-width:1599px;
+  justify-content:space-evenly;
+  padding:1em 2em 1em 2em;
 }
-.gallery-cards img{
-width: 100%;
+.project-images{
+    max-width: 98%;
+    max-height: 280px; /* or any max height you prefer */
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain; 
 }
 .gr-3 button{
   background-color: #005C86;

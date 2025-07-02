@@ -28,9 +28,7 @@
     border-radius:25px;
     border: 5px solid #80A1FF;
 }
-.image{
-    width: 100%;
-}
+
 .links{
     display:flex;
     justify-content:space-evenly;
