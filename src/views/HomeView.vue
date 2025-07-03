@@ -32,7 +32,7 @@
 
       </div>
       <div class="gallery-row gr-3">
-        <button id="project-explore-btn" @click="amountDisplayed = 6">EXPLORE MORE</button>
+        <button id="project-explore-btn" @click="amountDisplayed = amountDisplayed*2">EXPLORE MORE</button>
       </div>
     </div>
   </section>
@@ -86,8 +86,12 @@ export default {
       return this.$store.state.projects
     },
     getScreenSize(){
-      if (window.matchMedia("(max-width: 500px)").matches) {
+      if (window.matchMedia("(max-width: 830px)").matches) {
         this.amountDisplayed = 4
+      }else if(window.matchMedia("(min-width: 2080px)").matches){
+        this.amountDisplayed = 4
+      }else{
+        this.amountDisplayed = 3
       }
     }
   },
@@ -128,7 +132,8 @@ export default {
   align-items:center;
   justify-content:center;
 
-  height: 150vh;
+  height: fit-content;
+  padding:9em 0 3em 0 ;
   background: rgb(13,31,148);
   background: linear-gradient(180deg, rgba(13,31,148,0.15) 10%, rgba(131,25,120,0.2970081831560749) 57%, rgba(13,31,148,0.1) 100%);}
 
@@ -147,6 +152,7 @@ export default {
   max-width:1599px;
   justify-content:space-evenly;
   padding:1em 2em 1em 2em;
+  height:fit-content;
 }
 .project-images{
     max-width: 98%;
@@ -167,12 +173,10 @@ export default {
 .project-gallery{
   width:100%;
   height:auto;
-  margin: 0 .5em 0 .5em;
+  margin: 1em 1em 1em 1em;
   
 }
-.card{
-  width: fit-content;
-}
+
 
 /* project github and live styling */
 .links>a{
@@ -202,10 +206,20 @@ height: 20px;
 button:hover{
     background-color: #3f3d3d;
 }
+@media only screen and (max-width: 1025px){
+      .gallery-cards{
+    grid-template-columns: repeat(auto-fit, minMax(250px, 1fr));
+  }
+}
 
 @media only screen and (max-width: 500px){
   .gallery-cards{
     grid-template-columns: repeat(auto-fit, minMax(170px, 1fr));
+  }
+}
+@media only screen and (min-width: 2080px){
+  .gallery-cards{
+    max-width:1999px;
   }
 }
 </style>

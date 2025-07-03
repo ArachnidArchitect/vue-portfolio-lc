@@ -12,16 +12,16 @@
         </div>
         <div class="resume-row">
             <div class="resume-col">
-                <div class="resume-card" >
-                    <div class="resume-item" ><h1>[2022] - Graduated from Islamia College</h1></div>
+                <div class="resume-card" data-aos="zoom-in-right">
+                    <div class="resume-item" ><h1>[2024] -  Full stack Web Dev Intern - Life Choices</h1></div>
                     <div class="resume-item-line"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/resumeAsset1.png" alt=""></div>
                 </div>
                 <div class="resume-card" data-aos="zoom-in-right">
                     <div class="resume-item" ><h1>[2023] - Data Engineer - Boldr X Afresh Technologies </h1></div>
                     <div class="resume-item-line"><img src="https://arachnidarchitect.github.io/portfolio-hosting-v1/resumeAsset1.png" alt=""></div>
                 </div>
-                <div class="resume-card" data-aos="zoom-in-right">
-                    <div class="resume-item" ><h1>[2024] -  Full stack Web Dev Intern - Life Choices</h1></div>
+                <div class="resume-card" >
+                    <div class="resume-item" ><h1>[2022] - Graduated from Islamia College</h1></div>
                     <div class="resume-item-line"></div>
                 </div>
             </div>
@@ -34,8 +34,8 @@
 </template>
 <style>
     .resume{
-        height: 110vh;
-        margin-bottom:5em;
+        height: fit-content;
+        margin:0 0 3em 0;
 
     }
     .resume-row{
